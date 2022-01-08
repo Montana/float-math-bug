@@ -27,3 +27,18 @@ Changed in the new version:
   * Convert the more-precise number from a string back to a float
 
 The last point may be significant, because it avoids converting the float to a string and back to a float again in **every** iteration. This conversion is done only when necessary.
+
+Another version of this is, where the variable `i` is actually a string to avoid bugs in floating point addition, but this has an opportunity cost of plausibly causing more type conversions:
+
+```javascript
+for (n = 0; n <= 100; ++n) {
+  with ('00' + n) {
+    // i = (n / 100), two decimal places
+    i = substr(0, (length-2)) + '.' + substr(-2);
+  }
+  j = i * 100;
+  if (Math.round(j) != j) {
+    console.log(n, 'Multiplication error:', i, j);
+  }
+}
+```
