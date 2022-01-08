@@ -4,7 +4,7 @@ This was inspired by: https://stackoverflow.com/questions/588004/is-floating-poi
 
 Demonstrated is JavaScript's floating point math bugs by showing which two-decimal-place numbers between `0.00` and `1.00` inclusive have fractional parts after being multiplied by one hundred.
 
-The original version of this program used the floating-point value, i, as the loop counter of the for-loop. Apparently, using a floating-point number, along with a loop final-expression that converted the value to a string and back to a float again in an attempt to carefully increment by 0.01, caused Bad Things™ to happen. E.g., the loop would run for thousands of iterations rather than exactly one hundred, causing the browser to freeze.
+The original version of this program used the floating-point value, i, as the loop counter of the for-loop. Apparently, using a floating-point number, along with a loop final-expression that converted the value to a string and back to a float again in an attempt to carefully increment by 0.01, caused Bad Things to happen. E.g., the loop would run for thousands of iterations rather than exactly one hundred, causing the browser to freeze.
 
 The original code:
 
