@@ -1,6 +1,7 @@
 # Is Floating Point Math Broken? 
 
 This was inspired by: https://stackoverflow.com/questions/588004/is-floating-point-math-broken
+_12 years ago_.
 
 Demonstrated is JavaScript's floating point math bugs by showing which two-decimal-place numbers between `0.00` and `1.00` inclusive have fractional parts after being multiplied by one hundred.
 
